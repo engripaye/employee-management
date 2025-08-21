@@ -9,6 +9,5 @@
 <h1>Employee Management System</h1>
 <a href="list_employees.php">View Employees</a>
 <a href="add_employee.php">Add Employee</a>
-<a href="update_employee.php">Update Employee</a>
 </body>
 </html>
