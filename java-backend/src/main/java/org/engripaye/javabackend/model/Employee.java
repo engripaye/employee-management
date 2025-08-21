@@ -1,9 +1,6 @@
 package org.engripaye.javabackend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,4 +17,6 @@ public class Employee {
 
     private String name;
     private String role;
+    @Version
+    private Integer version; // Hibernate will use this column for optimistic locking
 }
