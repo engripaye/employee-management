@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2>Add Employee</h2>
 <form method="post">
     Name: <input type="text" name="name" required><br>
-    Role: <input type="text" name="name" required><br>
+    Role: <input type="text" name="role" required><br>
     <button type="submit">Add</button>
 </form>
 <a href="index.php">Back</a>
