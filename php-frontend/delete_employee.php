@@ -2,10 +2,9 @@
 global $api_url;
 include 'config.php';
 
-if(isset($Get['id'])) {
-    $id = $_GET['id'];
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $id = intval($_GET['id']); // make sure it's a number
 
-    // create DELETE request
     $options = [
         "http" => [
             "header" => "Content-Type: application/json\r\n",
@@ -14,14 +13,14 @@ if(isset($Get['id'])) {
     ];
 
     $context = stream_context_create($options);
-    $url = $api_url . "/" . $id; // e.g., http://localhost:8080/employees/{id}
 
-    $result = file_get_contents($url, false, $context);
+    // Call the backend DELETE API with the ID
+    $url = $api_url . "/" . $id;
+    $response = file_get_contents($url, false, $context);
 
-    // Redirect back to list page after deletion
-    header("Location: list_employee.php");
-    exit();
+    // Redirect back to list
+    header("Location: list_employees.php");
+    exit;
 } else {
-    echo "No employee ID provided";
+    echo "❌ No employee ID provided";
 }
-?>
