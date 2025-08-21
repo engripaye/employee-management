@@ -1,0 +1,50 @@
+/* style.css - Employee Management UI */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Employee Management</title>
-
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <h1>employee Management System</h1>
-    <a href="list_employees.php">View Employees</a>
-    <a href="add_employee.php">Add Employees</a>
-    <a href="update_employee.php">Update Employees</a>
+<h1>Employee Management System</h1>
+<a href="list_employees.php">View Employees</a>
+<a href="add_employee.php">Add Employee</a>
+<a href="update_employee.php">Update Employee</a>
 </body>
 </html>
