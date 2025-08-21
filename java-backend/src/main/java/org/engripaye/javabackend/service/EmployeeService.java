@@ -21,6 +21,18 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public Employee updateEmployee(Long id, Employee updatedEmployee){
+        Employee existing = getEmployeeById(id);
+        existing.setName(updatedEmployee.getName());
+        existing.setRole(updatedEmployee.getRole());
+        return employeeRepository.save(existing);
+    }
+
+    public Employee getEmployeeById(Long id) {
+        return employeeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Employee not found"));
+    }
+
 
     public void deleteById(Long id) {
         if(employeeRepository.existsById(id)){

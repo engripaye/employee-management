@@ -11,10 +11,9 @@ $employees = json_decode($response, true);
     <?php foreach ($employees as $emp): ?>
         <li>
             <?php echo $emp['name'] . " - " . $emp['role']; ?>
+            <a href="update_employee.php?id=<?php echo $emp['id']; ?>">Edit</a>
             <a href="delete_employee.php?id=<?php echo $emp['id']; ?>"
-               onclick="return confirm('Are you sure you want to delete this employee?');">
-                Delete
-            </a>
+               onclick="return confirm('Are you sure?');">Delete</a>
         </li>
     <?php endforeach; ?>
 </ul>
