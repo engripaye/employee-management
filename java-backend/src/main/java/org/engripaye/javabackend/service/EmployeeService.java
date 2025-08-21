@@ -22,4 +22,12 @@ public class EmployeeService {
     }
 
 
+    public void deleteById(Long id) {
+        if(employeeRepository.existsById(id)){
+            employeeRepository.deleteById(id);
+        } else {
+            throw new RuntimeException("Employee with " + id + " not found");
+        }
+
+    }
 }
